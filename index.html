@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Weather</title>
+
+        <script src="/js/libraries/vue.min.js"></script>
+        <script src="keys.js"></script>
+        <script src="/js/moon.js"></script>
+
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet.css" />
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet-openweathermap.css" />
+        <link rel="stylesheet" href="/js/libraries/leaflet/leaflet-languageselector.css" />
+
+        <script src="/js/libraries/leaflet/leaflet.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.Layer.js"></script>
+        <script src="/js/libraries/leaflet/Permalink.Overlay.js"></script>
+        <script src="/js/libraries/leaflet/leaflet-openweathermap.js"></script>
+        <script src="/js/libraries/leaflet/leaflet-languageselector.js"></script>
+
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+
+
+
+        <input placeholder="Enter Your ZIP Code" name="name" id="zip" />
+        <p id="zip_display"></p>
+
+        <div class="alertbar">
+            <div class="alert">
+                <hr>
+                <p>ALERT : High winds coming from the North to pick up around 4:30 pm today by bar area!    ALERT : High winds coming from the North to pick up around 4:30 pm today by bar area!   ALERT : High winds coming from the North to pick up </p>
+            <hr>
+            </div>
+
+        </div>
+
+        <div class="headerinfo">
+            <div class="location">
+                <h1>SAN JOSE, CALIFORNIA</h1>
+            </div>
+            <div class="datetime">
+                <h3>October 24, 2019 10:05 AM
+                    <br>Lat/Long 39.14º N / 96.68º W </h3>
+            </div>
+            <div class="dividerline"></div>
+
+            <div class="windinfo">
+                <br><strong>Wind Speed</strong> 9.2 mph
+                <br><strong>Wind Direction</strong> SW
+                <br><strong>Humidity</strong> 63%
+                <br><strong>Precipitation</strong> 0”
+                <br><strong>Air Pressure</strong> 29.84”
+                <br><strong>Sunrise/Sunset</strong> 6:55 am / 7:14pm
+                </br>
+            </div>
+            </div>
+                
+            <div class="tempbox">
+                <div class="backgroundboxyellow">
+                    <div class="tempbox_type">78º</div>
+        </div>
+                <div class="iconbox">
+                        <div class="icon">78º</div>
+            </div>
+                
+        </div>
+
+        </div>
+
+        </div>
+
+       
+ 
+<!-- 
+        <div class="headersidebar">
+            <div class="datetime"></div>
+            <div class="latlong"></div>
+        </div>
+
+        <div class="redbar">
+            <div class="dailybox"></div>
+            <div class="dailybox2"></div>
+            <div class="dailybox3"></div>
+            <div class="dailybox4"></div>
+            <div class="dailybox5"></div>
+            <div class="outlinebox3"></div>
+            <div class="outlinebox4"></div>
+            <div class="outlinebox5"></div>
+            <div class="outlinebox6"></div>
+            <div class="outlinebox7"></div>
+
+
+        </div> -->
+
+        <div class="fivedayforecast">
+            <div class="cellone_dayzero">
+                    <div class="day1">Sunday</div>
+                    <div class="highlow1">82º/72º</div>
+                    <div class="description">Sunny and warm throughout the 
+                            afternoon. Expect slight showers
+                            throughout the night very late.</div>
+                    <div class="outlinebox_zero"></div>
+            </div>
+            <div class="cellone_dayone">
+                    <div class="day2">Monday</div>
+                    <div class="highlow1">76º/69º</div>
+                    <div class="description">Overcast with slight chance of
+                            precipitation towards the end of
+                            the afternoon. Mostly clear skies.</div>
+                    <div class="outlinebox_one"></div>       
+            </div>
+            <div class="cellone_daytwo">
+                    <div class="day2">Tuesday</div>
+                    <div class="highlow1">72º/56º</div>
+                    <div class="description">Cloudy and overcast through the
+                            morning until around 3:00 pm. 
+                            Winds will pick up throughout the 
+                            day.</div>
+                    <div class="outlinebox_two"></div>
+            </div>
+            <div class="cellone_daythree">
+                    <div class="day2">Wednesday</div>
+                    <div class="highlow1">80º/65º</div>
+                    <div class="description">Sunny and warm throughout the 
+                            afternoon. Expect slight showers
+                            throughout the night very late.</div>
+                    <div class="outlinebox_three"></div>
+            </div>
+            <div class="cellone_dayfour">
+                    <div class="day2">Thursday</div>
+                    <div class="highlow1">76º/56º</div>
+                    <div class="description">Sunny and warm. Cloud coverage 
+                            throughout the afternoon and 
+                            slight chance of precipitation. </div>
+                    <div class="outlinebox_four"></div>
+            </div>
+            <div class="cellone_dayfive">
+                    <div class="outlinebox_five"></div>
+            </div>
+        </div>
+            <div class="forecastcontainer_green">
+                <div class="cellone_iconzero"></div>
+                <div class="cellone_iconone"></div>
+                <div class="cellone_icontwo"></div>
+                <div class="cellone_iconthree"></div>
+                <div class="cellone_iconfour"></div>
+                <div class="cellone_iconfive"></div>
+            </div>
+        
+
+        </div>
+
+        <div class= "radarphoto">
+                <img src="images/weatherradar.png" alt="radar">
+                <div class="desriptionradar"></div>
+        </div>
+
+    
+
+
+        <div class="dailyconditionscontainer_yellow">
+            <div class="columnbox_zero">10.0mi</div>
+            <div class="columnbox_one">4 uv</div>
+            <div class="columnbox_two">67.45%</div>
+            <div class="columnbox_three">45%</div>
+            <div class="columnbox_four">92.1%</div>
+            <div class="columnbox_five">30</div>
+            
+        </div>
+
+
+
+
+
+
+
+
+        <div class="results" id="app">
+            <h1>TIME</h1>
+            <p>{{time.day}}</p>
+            <p>{{time.date}}</p>
+            <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
+            <p>{{time.moom}}</p>
+
+            <h1>META</h1>
+            <p>{{city}}</p>
+
+            <p>{{location.zip}}</p>
+            <p>{{location.coord.lat}}</p>
+            <p>{{location.coord.lon}}</p>
+            <p>{{location.name}}</p>
+
+            <p>{{error}}</p>
+
+
+            <h1>CURRENT</h1>
+            <p>{{current.description_main}}</p>
+            <p>{{current.description_long}}</p>
+            <p>{{current.description_icon}}</p>
+
+            <p class="degree_symbol">{{current.temp.current}}</p>
+            <p class="degree_symbol">{{current.temp.high}}</p>
+            <p class="degree_symbol">{{current.temp.low}}</p>
+
+            <p>{{current.wind.speed}}</p>
+            <p class="degree_symbol">{{current.wind.degree}}</p>
+            <p>{{current.cloud_cover}}</p>
+
+            <p>{{current.rain}}</p>
+            <p>{{current.snow}}</p>
+
+            <p>{{current.sunrise}}</p>
+            <p>{{current.sunset}}</p>
+
+
+            <h1>HOURLY</h1>
+            <h4>Hour 1</h4>
+            <p>{{hourly[0].isDaytime ? 'Day' : 'Night' }}</p>
+            <p>{{hourly[0].number}}</p>
+            <p>{{hourly[0].shortForecast}}</p>
+            <p>{{hourly[0].startTime}}</p>
+            <p class="degree_symbol">{{hourly[0].temperature}}</p>
+            <p>{{hourly[0].emperatureTrend}}</p>
+            <p>{{hourly[0].windSpeed}}</p>
+            <p>{{hourly[0].windDirection}}</p>
+
+            <h1>FORECAST</h1>
+            <h4>Day 1</h4>
+            <p  class="degree_symbol">High - {{forecast[0].max_temp}}</p>
+            <p  class="degree_symbol">Low - {{forecast[0].min_temp}}</p>
+            <p>{{forecast[0].uv}}</p>
+            <p>{{forecast[0].weather.description}}</p>
+
+            <p>{{forecast[0].wind_spd}} mph</p>
+            <p>{{forecast[0].wind_cdir_full}}</p>
+            <p>{{forecast[0].wind_cdir}}</p>
+
+            <p>{{forecast[0].vis}}</p>
+
+            <p>{{forecast[0].pop}}</p>
+
+            <p>{{forecast[0].precip}}</p>
+
+            <p>{{forecast[0].snow}}</p>
+
+            <p>{{forecast[0].dewpt}}</p>
+            <p>{{forecast[0].pres}} mb</p>
+
+        </div>
+        <div id="map"></div>
+
+
+
+
+        <script src="/js/script.js" type="module"></script>
+    </body>
+</html>
