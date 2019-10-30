@@ -55,10 +55,10 @@
 .headerinfo {
     width: 1697px;
     height:635px;
-    background-color: white;
+    background-color:white;
     width:90%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 55px;
     display: grid;
 }
 
@@ -79,7 +79,7 @@
     font-size: small;
     margin-left: 40px;
     color:grey;
-    margin-bottom: 55%;
+    margin-bottom: 79%;
     
     
 }
@@ -94,7 +94,7 @@
     font-size: 95px;
     margin: auto;
     font-family: arial black;
-    color:grey;
+    color:black;
 }
 
 .backgroundboxyellow {
@@ -112,7 +112,13 @@
     background-color: yellow;
     margin: auto;
     display: grid;
-    margin-top: 25px;;
+    margin-top: 25px;
+    
+}
+
+.iconbackground {
+    margin: auto;
+    padding-top: 5px;
 }
 
 
@@ -120,7 +126,7 @@
 .fivedayforecast {
     width:85%;
     margin:auto;
-    margin-top: 547px;
+    margin-top: 517px;
     background-color: red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -132,7 +138,7 @@
     padding-bottom: 50px;
 }
 
-.day1{
+.day1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
@@ -186,6 +192,12 @@
     grid-column-gap:1.5em;
 }
 
+.iconsun {
+    background-color: yellow;
+    margin: auto;
+    display: grid;
+
+}
 .outlinebox_one {
     grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
     margin: auto;
@@ -226,8 +238,26 @@
     grid-column-gap:1.5em;
 }
 
+.description {
+    font-family: arial;
+    font-size: x-small;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.day2 {
+    font-family: arial;
+    font-size: medium;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+
 .img {
     padding-top: 25px;
+    margin: auto;
+    margin-left: 50px;
 }
 
 .dailyconditionscontainer_yellow{
@@ -241,8 +271,8 @@
     margin-top: 3em;
     font-size: 1em;
     text-align: center;
-    font-family: arial black;
-    font-size: xx-large;;
+    font-family: ariel black;
+    font-size: xx-large;
 }
 
 .columnbox_zero {
@@ -250,6 +280,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .columnbox_one {
@@ -257,6 +288,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .columnbox_two {
@@ -264,6 +296,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .columnbox_three {
@@ -271,6 +304,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .columnbox_four {
@@ -278,6 +312,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .columnbox_five {
@@ -285,6 +320,7 @@
     display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: arial black;
 }
 
 .forecastcontainer_blue{
