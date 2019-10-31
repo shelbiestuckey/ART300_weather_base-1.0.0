@@ -191,7 +191,6 @@
 .iconsun {   
     margin: auto;
     display: grid;
-    background-position: center;
     
 }
 
@@ -265,7 +264,7 @@
 
 
 .img {
-    padding-top: 35px;
+    padding-top: 25px;
     margin: auto;
     margin-left: 50px;
 }
@@ -274,22 +273,25 @@
     display: grid;
     width:200px;
     height:200px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     margin-left: 1.6em;
-    margin-top: 1.3em;
+    margin-top: 3em;
     font-size: 4em;
     text-align: center;
     font-family: ariel black;
     font-size: xx-large;
-    float:left;
+    background-color:yellow;
 
 }
 
+
+
 .columnbox_zero {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
@@ -297,6 +299,7 @@
 
 .columnbox_one {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
@@ -304,6 +307,7 @@
 
 .columnbox_two {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
@@ -311,6 +315,7 @@
 
 .columnbox_three {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
@@ -318,6 +323,7 @@
 
 .columnbox_four {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
@@ -325,25 +331,19 @@
 
 .columnbox_five {
     background-color:yellow;
+    display: grid;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: arial black;
 }
-.subtext{
-    font-size: 12pt;
-    font-family: helvetica;
-    
-}
 
-.radarphoto{
-    position:relative;
-    
-    padding-top:50px;
-    left:38%;
+.forecastcontainer_blue{
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+    margin: auto;
+    display: grid;
+    height: 160px;
+    width: 160px;
+    background-color: lightblue;
+    grid-template-rows: 1fr;
 
-}
-
-
-.results {
-    margin:bottom;
 }

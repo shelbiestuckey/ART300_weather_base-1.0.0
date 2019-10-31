@@ -35,7 +35,7 @@
         <div class="alertbar">
             <div class="alert">
                 <hr>
-                <p>ALERT : High winds coming from the North to pick up around 4:30 pm today by bar area!    ALERT : High winds coming from the North to pick up around 4:30 pm today by bar area!   ALERT : High winds coming from the North to pick up </p>
+                <p>ALERT : High winds coming from the North to pick up around 4:30 pm today by bay area!    ALERT : High winds coming from the North to pick up around 4:30 pm today by bay area!   ALERT : High winds coming from the North to pick  </p>
             <hr>
             </div>
 
@@ -46,19 +46,20 @@
                 <h1>SAN JOSE, CALIFORNIA</h1>
             </div>
             <div class="datetime">
-                <h3>October 24, 2019 10:05 AM
-                    <br>Lat/Long 39.14º N / 96.68º W </h3>
+                <h3>October 24, 2019 {{time.hour_12}}:{{time.minute}}:{{time.seconds}} {{time.ampm}}</h3>
+                   <h3>Lat/Long 39.14º N / 96.68º W </h3> 
             </div>
             <div class="dividerline"></div>
 
             <div class="windinfo">
-                <br><strong>––</strong> 
+                <br><strong>–––––––</strong> 
                 <br><strong>Wind Speed</strong> 9.2 mph
                 <br><strong>Wind Direction</strong> SW
                 <br><strong>Humidity</strong> 63%
                 <br><strong>Precipitation</strong> 0”
                 <br><strong>Air Pressure</strong> 29.84”
                 <br><strong>Sunrise/Sunset</strong> 6:55 am / 7:14pm
+                <br><strong>Moon</strong> Waning Cresent
                 </br>
             </div>
             </div>
@@ -92,7 +93,7 @@
                             throughout the night very late.</div>
             </div>
             <div class="cellone_dayone">
-                    <div class="day2">Monday –––––––– 76º/69º</div>
+                    <div class="day2">Monday ––––––– 76º/69º</div>
                     <div class="outlinebox_one"><div class="iconsun"><img src="images/Asset 3.png" alt="tempicon"></div></div>    
                     <div class="description">Overcast with slight chance of
                             precipitation towards the end of
@@ -107,15 +108,15 @@
                             Winds will pick up late morning.</div>
             </div>
             <div class="cellone_daythree">
-                    <div class="day2">Wednesday ––––– 80º/65º </div>
+                    <div class="day2">Wednesday –––– 80º/65º </div>
                     <div class="outlinebox_three"><div class="iconsun"><img src="images/Asset 5.png" alt="tempicon"></div></div>
                     <div class="description">Sunny and warm throughout the 
                             afternoon. Expect slight showers
                             throughout the night very late.</div>
             </div>
             <div class="cellone_dayfour">
-                    <div class="day2">Thursday ––––––– 76º/56º</div>
-                    <div class="outlinebox_four"><div class="iconsun"><img src="images/Asset 3.png" alt="tempicon"></div></div>
+                    <div class="day2">Thursday –––––– 76º/56º</div>
+                    <div class="outlinebox_four"><div class="iconsun"><img src="images/Asset 3.png" alt="tempicon "></div></div>
                     <div class="description">Sunny and warm. Cloud coverage 
                             throughout the afternoon and 
                             slight chance of precipitation. </div>
@@ -134,26 +135,46 @@
             </div>
         
 
-    
-
-        <div class= "radarphoto">
-                
-                <img src="images/weatherradar.png" alt="radar" style="width:600px;height:400px;">
-            
-        </div>
 
     
 
 
         <div class="dailyconditionscontainer_yellow">
-            <div class="columnbox_zero">10.0mi</div>
-            <div class="columnbox_one">4 uv</div>
-            <div class="columnbox_two">67.45%</div>
-            <div class="columnbox_three">45%</div>
-            <div class="columnbox_four">92.1%</div>
-            <div class="columnbox_five">30</div>
-            
+        
+            <div class="columnbox_zero">10.0mi
+                <article class="subtext"> Visibility</article>
+            </div>
+
+            <div class="columnbox_one">4 uv
+               <article class="subtext">UV Index</article>     
+            </div>
+
+            <div class="columnbox_two">67.45%
+                <article class="subtext"> Air Quality</article>
+            </div>
+            <div class="columnbox_three">45%
+                <article class="subtext">Cloud Coverage</article>
+            </div>
+            <div class="columnbox_four">92.1%
+                <article class="subtext">Phase of the Moon</article>
+            </div>
+            <div class="columnbox_five">30
+            <article class="subtext">Dew Point</article>
         </div>
+            
+
+      
+    
+    
+    
+           </div>
+        
+        
+        <div class= "radarphoto">
+        <img src="images/weatherradar.png" alt="radar" style="width:40%;height:40%x;">
+       </div>
+
+      
 
 
 
@@ -162,7 +183,8 @@
 
 
 
-        <div class="results" id="app">
+        
+       <!-- <div class="results" id="app">
             <h1>TIME</h1>
             <p>{{time.day}}</p>
             <p>{{time.date}}</p>
@@ -236,7 +258,7 @@
         </div>
         <div id="map"></div>
 
-
+ -->
 
 
         <script src="/js/script.js" type="module"></script>
